@@ -32,7 +32,6 @@ spec:
             value: "{{ .Values.kafdrop.schemaRegistry }}"
           - name: MSG_FORMAT
             value: "{{ .Values.kafdrop.messageFormat }}"
-          command: [ "java", "-jar /usr/local/bin/kafdrop.jar","--zookeeper.connect=${ZK_HOSTS}","--server.port=${KAFDROP_PORT}","--message.format=${MSG_FORMAT}" ]
           ports:
             - name: http
               containerPort: {{ .Values.kafdrop.port }}

@@ -3,11 +3,11 @@ entries:
   kafdrop:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-04-06T13:48:24.990885-04:00
+    created: 2019-04-06T14:50:49.109557-04:00
     description: Kafdrop chart for Kubernetes
-    digest: fcea80a5006a7230dc721edf013774114d86ac51011a7baffbdd3064a71ab8d2
+    digest: d57e99f2e525bcadbf65c32ee304d281e8c762214740e3792ab9f3c754e08aca
     name: kafdrop
     urls:
     - https://ojafri.github.io/helm-charts/kafdrop-0.1.0.tgz
     version: 0.1.0
-generated: 2019-04-06T13:48:24.989402-04:00
+generated: 2019-04-06T14:50:49.108765-04:00
