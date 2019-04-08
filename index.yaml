@@ -3,7 +3,16 @@ entries:
   cp-kafka-connect:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-04-08T15:02:05.517979-04:00
+    created: 2019-04-08T17:10:44.986104-04:00
+    description: A Helm chart for Confluent Kafka Connect on Kubernetes with Ingress
+    digest: afd98c67272610e3d41ceb6d3c1ee3ee587a74390f848ead7b6ea0362dbbd9ef
+    name: cp-kafka-connect
+    urls:
+    - https://ojafri.github.io/helm-charts/cp-kafka-connect-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-04-08T17:10:44.985516-04:00
     description: A Helm chart for Confluent Kafka Connect on Kubernetes
     digest: 41d6f46672f3bcb81fbf7e843c99c9279e4c472c24b4c888a1c04f166f925ad6
     name: cp-kafka-connect
@@ -13,11 +22,11 @@ entries:
   kafdrop:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-04-08T15:02:05.519068-04:00
+    created: 2019-04-08T17:10:44.986662-04:00
     description: Kafdrop chart for Kubernetes
     digest: 76e4649c0b5f91be629a9963adff98e33feece744b917ce3f5c1e86a4e410a65
     name: kafdrop
     urls:
     - https://ojafri.github.io/helm-charts/kafdrop-0.1.0.tgz
     version: 0.1.0
-generated: 2019-04-08T15:02:05.516382-04:00
+generated: 2019-04-08T17:10:44.982805-04:00
