@@ -18,7 +18,23 @@ imagePullPolicy: IfNotPresent
 ## ref: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
 imagePullSecrets:
 
+## internal port where kafka-connect rest api is hosted
 servicePort: 8083
+
+ingress:
+  enabled: true
+  annotations: 
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: kafdrop.local
+      paths: [""]
+
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
 
 ## Kafka Connect properties
 ## ref: https://docs.confluent.io/current/connect/userguide.html#configuring-workers
