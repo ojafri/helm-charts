@@ -17,25 +17,11 @@ This chart bootstraps a deployment of a Confluent Kafka Connect
 
 * [DockerHub -> ConfluentInc](https://hub.docker.com/u/confluentinc/)
 
-## Installing the Chart
-
-### Install along with cp-helm-charts
-
-```console
-git clone https://github.com/confluentinc/cp-helm-charts.git
-helm install cp-helm-charts
-```
-
-To install with a specific name, you can do:
-
-```console
-helm install --name my-confluent cp-helm-charts
-```
 
 ### Install with a existing CP-Kafka release
 
 ```console
-helm install --set kafka.bootstrapServers="PLAINTEXT://lolling-chinchilla-cp-kafka-headless:9092",cp-schema-registry.url="lolling-chinchilla-cp-schema-registry:8081" cp-helm-charts/charts/cp-kafka-connect
+helm install --set kafka.bootstrapServers="PLAINTEXT://lolling-chinchilla-cp-kafka-headless:9092",cp-schema-registry.url="lolling-chinchilla-cp-schema-registry:8081" cp-kafka-connect
 ```
 
 ### Installed Components
