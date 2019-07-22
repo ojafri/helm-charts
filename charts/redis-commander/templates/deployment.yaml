@@ -25,66 +25,66 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
           - name: REDIS_PORT
-            value: "{{ .Values.redis-commander.REDIS_PORT }}"
+            value: "{{ .Values.rediscommander.REDIS_PORT }}"
           - name: REDIS_HOST
-            value: "{{ .Values.redis-commander.REDIS_HOST }}"
+            value: "{{ .Values.rediscommander.REDIS_HOST }}"
           - name: REDIS_SOCKET
-            value: "{{ .Values.redis-commander.REDIS_SOCKET }}"
+            value: "{{ .Values.rediscommander.REDIS_SOCKET }}"
           - name: REDIS_TLS
-            value: "{{ .Values.redis-commander.REDIS_TLS }}"
+            value: "{{ .Values.rediscommander.REDIS_TLS }}"
           - name: REDIS_PASSWORD
-            value: "{{ .Values.redis-commander.REDIS_PASSWORD }}"
+            value: "{{ .Values.rediscommander.REDIS_PASSWORD }}"
           - name: REDIS_DB
-            value: "{{ .Values.redis-commander.REDIS_DB }}"
+            value: "{{ .Values.rediscommander.REDIS_DB }}"
           - name: REDIS_HOSTS
-            value: "{{ .Values.redis-commander.REDIS_HOSTS }}"
+            value: "{{ .Values.rediscommander.REDIS_HOSTS }}"
           - name: SENTINEL_PORT
-            value: "{{ .Values.redis-commander.SENTINEL_PORT }}"
+            value: "{{ .Values.rediscommander.SENTINEL_PORT }}"
           - name: SENTINEL_HOST
-            value: "{{ .Values.redis-commander.SENTINEL_HOST }}"
+            value: "{{ .Values.rediscommander.SENTINEL_HOST }}"
           - name: SENTINELS
-            value: "{{ .Values.redis-commander.SENTINELS }}"
+            value: "{{ .Values.rediscommander.SENTINELS }}"
           - name: CLIENT_MAX_BODY_SIZE
-            value: "{{ .Values.redis-commander.SENTINEL_NAME }}"
+            value: "{{ .Values.rediscommander.SENTINEL_NAME }}"
           - name: SENTINEL_PASSWORD
-            value: "{{ .Values.redis-commander.SENTINEL_PASSWORD }}"
+            value: "{{ .Values.rediscommander.SENTINEL_PASSWORD }}"
           - name: K8S_SIGTERM
-            value: "{{ .Values.redis-commander.K8S_SIGTERM }}"
+            value: "{{ .Values.rediscommander.K8S_SIGTERM }}"
           - name: HTTP_USER
-            value: "{{ .Values.redis-commander.HTTP_USER }}"
+            value: "{{ .Values.rediscommander.HTTP_USER }}"
           - name: HTTP_PASSWORD
-            value: "{{ .Values.redis-commander.HTTP_PASSWORD }}"
+            value: "{{ .Values.rediscommander.HTTP_PASSWORD }}"
           - name: HTTP_PASSWORD_HASH
-            value: "{{ .Values.redis-commander.HTTP_PASSWORD_HASH }}"
+            value: "{{ .Values.rediscommander.HTTP_PASSWORD_HASH }}"
           - name: ADDRESS
-            value: "{{ .Values.redis-commander.ADDRESS }}"
+            value: "{{ .Values.rediscommander.ADDRESS }}"
           - name: PORT
-            value: "{{ .Values.redis-commander.PORT }}"
+            value: "{{ .Values.rediscommander.PORT }}"
           - name: READ_ONLY
-            value: "{{ .Values.redis-commander.READ_ONLY }}"
+            value: "{{ .Values.rediscommander.READ_ONLY }}"
           - name: URL_PREFIX
-            value: "{{ .Values.redis-commander.URL_PREFIX }}"
+            value: "{{ .Values.rediscommander.URL_PREFIX }}"
           - name: URL_PREFIX
-            value: "{{ .Values.redis-commander.URL_PREFIX }}"
+            value: "{{ .Values.rediscommander.URL_PREFIX }}"
           - name: NOSAVE
-            value: "{{ .Values.redis-commander.NOSAVE }}"
+            value: "{{ .Values.rediscommander.NOSAVE }}"
           - name: NO_LOG_DATA
-            value: "{{ .Values.redis-commander.NO_LOG_DATA }}"
+            value: "{{ .Values.rediscommander.NO_LOG_DATA }}"
           - name: FOLDING_CHAR
-            value: "{{ .Values.redis-commander.FOLDING_CHAR }}"
+            value: "{{ .Values.rediscommander.FOLDING_CHAR }}"
           - name: SCAN_COUNT
-            value: "{{ .Values.redis-commander.SCAN_COUNT }}"
+            value: "{{ .Values.rediscommander.SCAN_COUNT }}"
           - name: FLUSH_ON_IMPORT
-            value: "{{ .Values.redis-commander.FLUSH_ON_IMPORT }}"
+            value: "{{ .Values.rediscommander.FLUSH_ON_IMPORT }}"
           - name: REDIS_CONNECTION_NAME
-            value: "{{ .Values.redis-commander.REDIS_CONNECTION_NAME }}"
+            value: "{{ .Values.rediscommander.REDIS_CONNECTION_NAME }}"
           - name: REDIS_LABEL
-            value: "{{ .Values.redis-commander.REDIS_LABEL }}"
+            value: "{{ .Values.rediscommander.REDIS_LABEL }}"
           - name: CLIENT_MAX_BODY_SIZE
-            value: "{{ .Values.redis-commander.CLIENT_MAX_BODY_SIZE }}"
+            value: "{{ .Values.rediscommander.CLIENT_MAX_BODY_SIZE }}"
           ports:
             - name: http
-              containerPort: {{ .Values.redis-commander.PORT }}
+              containerPort: {{ .Values.rediscommander.PORT }}
               protocol: TCP
           livenessProbe:
             httpGet:

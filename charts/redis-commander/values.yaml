@@ -12,7 +12,7 @@ image:
 nameOverride: ""
 fullnameOverride: ""
 
-redis-commander:
+rediscommander:
   REDIS_PORT: #The port to find redis on.                                 [string]
   REDIS_HOST: #The host to find redis on.                                 [string]				  
   REDIS_SOCKET: #The unix-socket to find redis on.                        [string]				
