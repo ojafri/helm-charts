@@ -1,0 +1,80 @@
+# Default values for redis-commander.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: rediscommander/redis-commander
+  tag: latest
+  pullPolicy: Always
+
+nameOverride: ""
+fullnameOverride: ""
+
+redis-commander:
+  REDIS_PORT: #The port to find redis on.                                 [string]
+  REDIS_HOST: #The host to find redis on.                                 [string]				  
+  REDIS_SOCKET: #The unix-socket to find redis on.                        [string]				
+  REDIS_PASSWORD: #The redis password.                                    [string]
+  REDIS_DB: #The redis database.                                          [string]
+  REDIS_HOSTS: #The host to find redis on.                                [string]
+  REDIS_TLS:   # Use TLS for connection to redis server or sentinel.      [boolean] [default: false]			
+  SENTINEL_PORT: #The port to find redis sentinel on.                     [string]
+  SENTINEL_HOST: # The host to find redis sentinel on.                    [string]
+  SENTINELS:  #Comma separated list of sentinels with host:port.          [string]  [default: mymaster]
+  SENTINEL_NAME: #The redis sentinel group name to use.                   [string]  [default: mymaster]
+  SENTINEL_PASSWORD:  #The password for sentinel instance.                [string]  [default: mymaster]
+  HTTP_USER: #The http authorisation username.                            [string]
+  HTTP_PASSWORD: #The http authorisation password.                        [string]
+  HTTP_PASSWORD_HASH: #The http authorisation password hash.              [string]
+  ADDRESS:  #The address to run the server on.                            [string]  [default: 0.0.0.0]
+  PORT: 8081  #The port to run the server on.                             [string]  [default: 8081]
+  READ_ONLY:   #Start app in read-only mode.                              [boolean] [default: false]
+  URL_PREFIX:     #The url prefix to respond on.                          [string]  [default: ""]
+  ROOT_PATTERN:     #The root pattern of the redis keys.                  [string]  [default: "*"]
+  NOSAVE: true  #Do not save new connections to config file.              [boolean] [default: true]
+  NO_LOG_DATA:        #Do not log data values from redis store.           [boolean] [default: false]
+  FOLDING_CHAR: #Character to fold keys at in tree view.                  [character] [default: ":"]
+  USE_SCAN:     #Use scan instead of keys.                                [boolean] [default: false]
+  SCAN_COUNT:       #The size of each seperate scan.                      [integer] [default: 100]
+  FLUSH_ON_IMPORT:        #default false                                  [boolean]
+  REDIS_CONNECTION_NAME:   # default "redis-commander"                    [string]
+  REDIS_LABEL:   #default "local"                                         [string]
+  CLIENT_MAX_BODY_SIZE:  #default "100kb"                                 [string]
+  K8S_SIGTERM:   # (default "0") can be set to "1" to work around kubernetes specificas to allow pod replacement with zero downtime.
+service:
+  type: ClusterIP
+  port: 80
+ingress:
+  enabled: true
+  hosts:
+    - host: redis-commander.lab.hci.aetna.com
+      paths: [""]
+  tls: 
+    - hosts:
+        - kafdrop.lab.hci.aetna.com
+  annotations:
+    kubernetes.io/ingress.class: internal
+    ingress.kubernetes.io/affinity: cookie
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
